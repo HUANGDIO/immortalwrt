@@ -32,6 +32,9 @@ echo 'hsts=0' > /root/.wgetrc
 rm -rf /tmp/luci-modulecache/
 rm -f /tmp/luci-indexcache
 
+sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release
+echo "DISTRIB_DESCRIPTION='HongWrt 2012-10-25 '" >> /etc/openwrt_release
+
 mv /etc/openwrt_banner /etc/banner
 
 exit 0
